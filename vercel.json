@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "vechicle_system/asgi.py",
+      "src": "vehicle_system/asgi.py",
       "use": "@vercel/python",
       "config": {
         "runtime": "python3.12",
@@ -13,7 +13,7 @@
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "staticfiles_build",
+        "distDir": "staticfiles",
         "buildCommand": "bash build_files.sh"
       }
     }
@@ -25,7 +25,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "vechicle_system/asgi.py"
+      "dest": "vehicle_system/asgi.py"
     }
   ]
 }
